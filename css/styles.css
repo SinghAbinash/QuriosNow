@@ -1,0 +1,57 @@
+:root{
+  --bg1: #0f172a;
+  --bg2: #0b1220;
+  --accent: #7c5cff;
+  --accent-2: #00d4ff;
+  --glass: rgba(255,255,255,0.06);
+  --muted: rgba(255,255,255,0.75);
+  --card-shadow: 0 10px 30px rgba(2,6,23,0.6);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  color:#e6eef8;
+  background: linear-gradient(180deg,var(--bg1),var(--bg2));
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+.page-bg{position:fixed;inset:0;opacity:0.06;background:radial-gradient(600px 300px at 15% 20%, var(--accent), transparent), radial-gradient(500px 300px at 85% 80%, var(--accent-2), transparent);pointer-events:none}
+.container{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 24px}
+.site-header{position:fixed;top:20px;left:20px;right:20px;display:flex;justify-content:flex-start;align-items:center}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:700;color:#041025}
+.brand-text h1{margin:0;font-size:18px;letter-spacing:0.2px}
+.brand-text .domain{margin:0;font-size:12px;color:var(--muted)}
+.hero{width:100%;max-width:920px;padding-top:56px}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));border-radius:16px;padding:36px;box-shadow:var(--card-shadow);backdrop-filter: blur(8px);border:1px solid rgba(255,255,255,0.04)}
+.eyebrow{margin:0;color:var(--accent);font-weight:600;letter-spacing:1px;text-transform:uppercase}
+.title{margin:8px 0 12px;font-size:28px}
+.lead{margin:0 0 20px;color:var(--muted);line-height:1.45}
+.countdown{display:flex;gap:12px;margin:12px 0 18px;justify-content:center}
+.time{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:12px 16px;border-radius:10px;text-align:center;min-width:76px}
+.time span{display:block;font-size:20px;font-weight:700}
+.time small{display:block;color:var(--muted);font-size:12px}
+.subscribe{display:flex;gap:8px;margin-top:6px;align-items:center}
+.subscribe input{flex:1;padding:12px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit;outline:none}
+.subscribe button{padding:12px 16px;border-radius:10px;border:none;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#041025;font-weight:700;cursor:pointer}
+.msg{margin:10px 0 0;font-size:14px;color:#cbe7ff;min-height:20px}
+.meta{display:flex;align-items:center;gap:12px;margin-top:18px;justify-content:space-between}
+.small{margin:0;color:var(--muted);font-size:13px}
+.socials{display:flex;gap:10px}
+.icon{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:9px;background:rgba(255,255,255,0.02);color:var(--muted);text-decoration:none}
+.site-footer{margin-top:28px;color:rgba(255,255,255,0.5);text-align:center}
+
+@media (max-width:640px){
+  .card{padding:20px;border-radius:14px}
+  .title{font-size:20px}
+  .time{min-width:56px;padding:10px}
+  .subscribe{flex-direction:column;align-items:stretch}
+  .subscribe button{width:100%}
+  .site-header{left:12px;right:12px}
+}
+
+/* subtle entrance animation */
+.card{transform:translateY(10px);opacity:0;animation:pop .6s cubic-bezier(.2,.9,.3,1) .08s forwards}
+@keyframes pop{to{transform:none;opacity:1}}
