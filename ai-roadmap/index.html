@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI Engineer Study Roadmap</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="hero">
+    <div class="container hero-inner">
+      <div class="hero-left">
+        <h1>🌟 AI Engineer Full Study Plan</h1>
+        <p class="subtitle">A structured, trackable roadmap with checklists and resources — study smarter, ship faster.</p>
+      </div>
+      <div class="hero-cta">
+        <button id="reset" class="btn-outline">Reset progress</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="container wrapper">
+    <aside class="sidebar">
+      <div class="sidebar-panel">
+        <div class="progress-label">Overall Progress</div>
+        <div class="progress-bar">
+          <div id="overallProgress" class="progress-fill" style="width:0%"></div>
+          <div id="overallPercent" class="progress-percent">0%</div>
+        </div>
+      </div>
+      <nav class="sidebar-nav" id="toc"></nav>
+    </aside>
+
+    <main class="content" id="roadmap"></main>
+  </div>
+
+  <footer class="footer container">
+    <div>Built with ❤️ — progress saved to your browser's storage.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
